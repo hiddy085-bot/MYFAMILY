@@ -1,0 +1,83 @@
+[
+  {
+    "id": "baba",
+    "jina": "Mzee Idd Samihu",
+    "picha": "/uploads/default/baba.jpg",
+    "kazi": "Mkulima na Mfanyabiashara",
+    "kuzaliwa": "12 Mei 1971",
+    "makazi": "Lindi, Tanzania",
+    "historia": "Mzee Idd ndiye nguzo ya familia."
+  },
+  {
+    "id": "mama",
+    "jina": "Mama Rukia Hussein",
+    "picha": "/uploads/default/mama.jpg",
+    "kazi": "Mama ntilie",
+    "kuzaliwa": "04 Septemba 1980",
+    "makazi": "Lindi, Tanzania",
+    "historia": "Mama Rukia amekuwa akifanya biashara tangu mwaka 2010."
+  },
+  {
+    "id": "dada",
+    "jina": "Salma Idd Samihu",
+    "picha": "/uploads/default/salma.jpg",
+    "kazi": "Mfanyabiashara",
+    "kuzaliwa": "22 Desemba 1997",
+    "makazi": "Dar es Salaam",
+    "historia": "Salma ni mtoto wa kwanza."
+  },
+  {
+    "id": "Kaka1",
+    "jina": "Hussein Idd Samihu",
+    "picha": "/uploads/default/hussein.jpg",
+    "kazi": "Mwanafunzi wa Uhandisi wa Kompyuta",
+    "kuzaliwa": "14 Oktoba 2001",
+    "makazi": "Dar es Salaam / Morogoro",
+    "historia": "Hussein ni mtaalamu wa mifumo ya kompyuta."
+  },
+  {
+    "id": "Kaka2",
+    "jina": "Ally Idd Samihu",
+    "picha": "/uploads/default/ally.jpg",
+    "kazi": "Mjasiriamali",
+    "kuzaliwa": "15 Januari 2003",
+    "makazi": "Dar es Salaam",
+    "historia": "Ally ni mtoto wa tatu."
+  },
+  {
+    "id": "dada1",
+    "jina": "Habiba Idd Samihu",
+    "picha": "/uploads/default/habiba.jpg",
+    "kazi": "Mfanyabiashara",
+    "kuzaliwa": "18 Aprili 2005",
+    "makazi": "Dar es Salaam",
+    "historia": "Habiba ni mtoto wa nne."
+  },
+  {
+    "id": "kaka3",
+    "jina": "Zakawi Idd Samihu",
+    "picha": "/uploads/default/zakawi.jpg",
+    "kazi": "Mjasiriamali",
+    "kuzaliwa": "01 Novemba 2008",
+    "makazi": "Dar es Salaam",
+    "historia": "Zakawi ni mtoto wa tano."
+  },
+  {
+    "id": "kaka4",
+    "jina": "Muler Idd Samihu",
+    "picha": "/uploads/default/muler.jpg",
+    "kazi": "Mfanyakazi Gereji",
+    "kuzaliwa": "14 Oktoba 2010",
+    "makazi": "Dar es Salaam",
+    "historia": "Muler ni mtoto wa sita."
+  },
+  {
+    "id": "dada2",
+    "jina": "Naima Fabiani Miyeye",
+    "picha": "/uploads/default/naima.jpg",
+    "kazi": "Mwanafunzi",
+    "kuzaliwa": "05 Februari 2019",
+    "makazi": "Dar es Salaam",
+    "historia": "Naima ni mtoto wa mwisho."
+  }
+]

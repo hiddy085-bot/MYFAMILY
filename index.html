@@ -1,0 +1,756 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sw" lang="sw">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="description" content="Tovuti rasmi ya Familia ya Mzee Idd Samihu - Kumbukumbu, Wasifu, Picha na Mawasiliano ya familia yetu" />
+    <meta name="keywords" content="Familia ya Mzee Idd, Idd Family, Familia Tanzania, Lindi, Wasifu wa Familia" />
+    <meta name="author" content="Hussein Idd Samihu" />
+    <meta name="theme-color" content="#2ecc71" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <title>Familia ya Mzee Idd | Tovuti Rasmi ya Familia</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+        /* Small fix for layout */
+        .page-content { display: none; }
+        .page-content.active-page { display: block; }
+        #home-page { display: block; }
+    </style>
+</head>
+<body>
+
+<!-- NAVIGATION BAR - MENU HORIZONTAL -->
+<div class="navbar">
+    <div class="logo">IDD FAMILY</div>
+    <ul class="nav-links">
+        <li><a href="#" onclick="onyeshaPage('home'); return false;">Nyumbani</a></li>
+        <li><a href="#" onclick="onyeshaPage('profiles'); return false;">Wasifu</a></li>
+        <li><a href="#" onclick="onyeshaPage('tree'); return false;">Mti wa Familia</a></li>
+        <li><a href="#" onclick="onyeshaPage('gallery'); return false;">Matukio</a></li>
+        <li><a href="#" onclick="onyeshaPage('guestbook'); return false;">Wageni</a></li>
+        <li><a href="#" onclick="onyeshaPage('contact'); return false;">Mawasiliano</a></li>
+        <li><a href="#" onclick="onyeshaPage('calendar'); return false;">Kalenda</a></li>
+        <li><a href="#" onclick="onyeshaPage('announcements'); return false;">Matangazo</a></li>
+        <li><a href="#" onclick="onyeshaPage('budget'); return false;">Fedha</a></li>
+        <li><a href="#" onclick="onyeshaPage('recipes'); return false;">Mapishi</a></li>
+        <li><a href="#" onclick="onyeshaPage('polls'); return false;">Kura</a></li>
+        <li><a href="#" onclick="onyeshaPage('memories'); return false;">Kumbukumbu</a></li>
+        <!-- VIPENGELE VIPYA 5 -->
+        <li><a href="#" onclick="onyeshaPage('contributions'); return false;">Michango</a></li>
+        <li><a href="#" onclick="onyeshaPage('chat'); return false;">Mazungumzo</a></li>
+        <li><a href="#" onclick="onyeshaPage('goals'); return false;">Malengo</a></li>
+        <li><a href="#" onclick="onyeshaPage('health'); return false;">Afya</a></li>
+        <li><a href="#" onclick="onyeshaPage('importantdates'); return false;">Siku Muhimu</a></li>
+    </ul>
+    <button class="dark-mode-toggle" onclick="badiliMuonekano()">Dark</button>
+</div>
+
+<!-- BIRTHDAY NOTIFICATION SECTION -->
+<div id="birthdaySection" class="glowing-box">
+    <span id="birthdayMessage">Inatafuta siku za kuzaliwa...</span>
+</div>
+
+<!-- NOTIFICATION CONTAINER -->
+<div id="notificationContainer"></div>
+
+<!-- MAIN CONTAINER -->
+<div class="container">
+    
+    <!-- ==================== HOME PAGE ==================== -->
+    <div id="home-page" class="page-content active-page">
+        <h1>Familia Yetu Pendwa na Iliyobarikiwa</h1>
+        <p class="subtitle">Watoto wema na wenye adabu mbele ya Mungu</p>
+        
+        <div class="welcome-card">
+            <p>Karibu kwenye mfumo wa kumbukumbu za familia yetu. Hapa unaweza kupata taarifa zote kuhusu wanafamilia, historia, picha, matukio na mawasiliano.</p>
+        </div>
+
+        <!-- Weather Widget -->
+        <div class="weather-widget">
+            <h3>Hali ya Hewa Kwa Wanafamilia</h3>
+            <div id="weatherWidget" class="weather-grid"></div>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="stats-container">
+            <div class="stat-box">
+                <div class="stat-number" id="familiaCount">0</div>
+                <div class="stat-label">Wanafamilia</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="pichaCount">0</div>
+                <div class="stat-label">Picha Zilizopakiwa</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="ujumbeCount">0</div>
+                <div class="stat-label">Ujumbe wa Wageni</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="matukioCount">0</div>
+                <div class="stat-label">Matukio Yajayo</div>
+            </div>
+        </div>
+
+        <div class="main-content-layout">
+            <div class="family-grid">
+                <button class="member-btn" onclick="onyeshaWasifu('baba')">Mzee Idd (Baba)</button>
+                <button class="member-btn" onclick="onyeshaWasifu('mama')">Mama Rukia (Mama)</button>
+                <button class="member-btn" onclick="onyeshaWasifu('dada')">Salma (Mkubwa)</button>
+                <button class="member-btn" onclick="onyeshaWasifu('Kaka1')">Hussein</button>
+                <button class="member-btn" onclick="onyeshaWasifu('Kaka2')">Ally</button>
+                <button class="member-btn" onclick="onyeshaWasifu('dada1')">Habiba</button>
+                <button class="member-btn" onclick="onyeshaWasifu('kaka3')">Zakawi</button>
+                <button class="member-btn" onclick="onyeshaWasifu('kaka4')">Muler</button>
+                <button class="member-btn" onclick="onyeshaWasifu('dada2')">Naima (Mwisho)</button>
+            </div>
+
+            <div id="profileBox" class="profile-card">
+                <div class="profile-img-container">
+                    <img id="profPicha" src="" alt="Picha ya Mwanafamilia" />
+                    <div class="img-placeholder" id="imgPlaceholder">
+                        <p>Hakuna Picha</p>
+                    </div>
+                </div>
+                <div class="marquee-container">
+                    <h2 id="profJina">Chagua Mwanafamilia</h2>
+                </div>
+                <table class="info-table">
+                    <tr><th>Kazi / Shughuli</th><td id="profKazi">-</td></tr>
+                    <tr><th>Tarehe ya Kuzaliwa</th><td id="profKuzaliwa">-</td></tr>
+                    <tr><th>Mahali anapoishi</th><td id="profMakazi">-</td></tr>
+                    <tr><th>Historia / Maelezo</th><td id="profHistoria">-</td></tr>
+                </table>
+                <button class="print-btn" onclick="chapishaWasifu()">Chapisha Wasifu</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== PROFILES PAGE ==================== -->
+    <div id="profiles-page" class="page-content" style="display: none;">
+        <h1>Wasifu wa Familia</h1>
+        <p class="subtitle">Bonyeza jina lolote kuona maelezo kamili ya mwanafamilia</p>
+        
+        <div class="main-content-layout">
+            <div class="family-grid">
+                <button class="member-btn" onclick="onyeshaWasifu('baba')">Mzee Idd (Baba)</button>
+                <button class="member-btn" onclick="onyeshaWasifu('mama')">Mama Rukia (Mama)</button>
+                <button class="member-btn" onclick="onyeshaWasifu('dada')">Salma (Mkubwa)</button>
+                <button class="member-btn" onclick="onyeshaWasifu('Kaka1')">Hussein</button>
+                <button class="member-btn" onclick="onyeshaWasifu('Kaka2')">Ally</button>
+                <button class="member-btn" onclick="onyeshaWasifu('dada1')">Habiba</button>
+                <button class="member-btn" onclick="onyeshaWasifu('kaka3')">Zakawi</button>
+                <button class="member-btn" onclick="onyeshaWasifu('kaka4')">Muler</button>
+                <button class="member-btn" onclick="onyeshaWasifu('dada2')">Naima (Mwisho)</button>
+            </div>
+            <div id="profileBox2" class="profile-card">
+                <div class="profile-img-container">
+                    <img id="profPicha2" src="" alt="Picha ya Mwanafamilia" />
+                </div>
+                <div class="marquee-container">
+                    <h2 id="profJina2">Chagua Mwanafamilia</h2>
+                </div>
+                <table class="info-table">
+                    <tr><th>Kazi / Shughuli</th><td id="profKazi2">-</td></tr>
+                    <tr><th>Tarehe ya Kuzaliwa</th><td id="profKuzaliwa2">-</td></tr>
+                    <tr><th>Mahali anapoishi</th><td id="profMakazi2">-</td></tr>
+                    <tr><th>Historia / Maelezo</th><td id="profHistoria2">-</td></tr>
+                </table>
+                <button class="print-btn" onclick="chapishaWasifu()">Chapisha Wasifu</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== FAMILY TREE PAGE ==================== -->
+    <div id="tree-page" class="page-content" style="display: none;">
+        <h1>Mti wa Familia Yetu</h1>
+        <p class="subtitle">Uhusiano na vizazi vya Familia ya Mzee Idd Samihu</p>
+        
+        <div class="family-tree-section">
+            <div class="tree-controls">
+                <button onclick="zoomTree('in')">Zoom In</button>
+                <button onclick="zoomTree('out')">Zoom Out</button>
+                <button onclick="resetTree()">Reset</button>
+            </div>
+            <div class="tree-container" id="treeContainer">
+                <div class="tree-level">
+                    <div class="tree-node parent">
+                        <span class="node-role">Baba</span>
+                        <strong>Mzee Idd Samihu</strong>
+                        <small>Mzee wa Familia</small>
+                    </div>
+                    <div class="tree-node parent">
+                        <span class="node-role">Mama</span>
+                        <strong>Mama Rukia Hussein</strong>
+                        <small>Mama wa Familia</small>
+                    </div>
+                </div>
+                <div class="tree-line"></div>
+                <div class="tree-level children-row">
+                    <div class="branch-group">
+                        <div class="tree-node child" onclick="onyeshaWasifu('dada')">
+                            <strong>Salma Idd</strong>
+                            <small>Mtoto wa Kwanza</small>
+                        </div>
+                        <div class="sub-line"></div>
+                        <div class="grandchildren-level">
+                            <div class="tree-node grandchild" onclick="alert('Yumna - Mtoto wa Salma')">
+                                <strong>Yumna</strong>
+                                <small>Mjukuu</small>
+                            </div>
+                            <div class="tree-node grandchild" onclick="alert('Yashvir - Mtoto wa Salma')">
+                                <strong>Yashvir</strong>
+                                <small>Mjukuu</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tree-node child" onclick="onyeshaWasifu('Kaka1')">
+                        <strong>Hussein</strong>
+                        <small>Mtoto wa Pili</small>
+                    </div>
+                    <div class="tree-node child" onclick="onyeshaWasifu('Kaka2')">
+                        <strong>Ally</strong>
+                        <small>Mtoto wa Tatu</small>
+                    </div>
+                    <div class="tree-node child" onclick="onyeshaWasifu('dada1')">
+                        <strong>Habiba</strong>
+                        <small>Mtoto wa Nne</small>
+                    </div>
+                    <div class="tree-node child" onclick="onyeshaWasifu('kaka3')">
+                        <strong>Zakawi</strong>
+                        <small>Mtoto wa Tano</small>
+                    </div>
+                    <div class="tree-node child" onclick="onyeshaWasifu('kaka4')">
+                        <strong>Muler</strong>
+                        <small>Mtoto wa Sita</small>
+                    </div>
+                    <div class="tree-node child" onclick="onyeshaWasifu('dada2')">
+                        <strong>Naima</strong>
+                        <small>Mtoto wa Mwisho</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== GALLERY PAGE ==================== -->
+    <div id="gallery-page" class="page-content" style="display: none;">
+        <h1>Kumbukumbu za Matukio</h1>
+        <p class="subtitle">Picha na matukio muhimu ya familia yetu</p>
+        
+        <div class="upload-section">
+            <h3>Shiriki Picha Zako</h3>
+            <div class="upload-area">
+                <input type="file" id="pichaInput" accept="image/*" multiple="multiple" />
+                <button type="button" class="browse-btn" onclick="chaguaPicha()">Chagua Picha</button>
+                <button type="button" class="upload-btn" onclick="pachiaPicha()">Pachia Picha</button>
+                <div id="uploadStatus" class="upload-status"></div>
+            </div>
+            <div class="upload-info">
+                <small>Unaweza kuchagua picha nyingi kwa wakati mmoja. Ukubwa wa kila picha usizidi 5MB.</small>
+            </div>
+        </div>
+        
+        <div class="family-section">
+            <h3>Picha Zetu</h3>
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" onclick="funguaLightbox('images/eid.jpg', 'Sikukuu ya Eid nyumbani Lindi.')">
+                    <img src="images/eid.jpg" alt="Eid Celebration" />
+                    <div class="gallery-desc">Sikukuu ya Eid</div>
+                </div>
+                <div class="gallery-item" onclick="funguaLightbox('images/shamba.jpg', 'Kilimo cha machungwa Lindi.')">
+                    <img src="images/shamba.jpg" alt="Shamba la Machungwa" />
+                    <div class="gallery-desc">Kilimo cha Machungwa</div>
+                </div>
+                <div class="gallery-item" onclick="funguaLightbox('images/baba.jpg', 'Mzee Idd akipumzika shambani.')">
+                    <img src="images/baba.jpg" alt="Mzee Idd" />
+                    <div class="gallery-desc">Mzee Idd</div>
+                </div>
+                <div class="gallery-item" onclick="funguaLightbox('images/mama.jpg', 'Mama Rukia akipika chakula.')">
+                    <img src="images/mama.jpg" alt="Mama Rukia" />
+                    <div class="gallery-desc">Mama Rukia</div>
+                </div>
+            </div>
+            
+            <div class="gallery-controls">
+                <button class="delete-all-btn" onclick="futaPichaZote()">Futa Picha Zote</button>
+                <button class="select-mode-btn" onclick="toggleSelectMode()">Chagua Picha Nyingi</button>
+            </div>
+            <div id="bulkDeleteControls" style="display: none; text-align: center; margin-top: 15px;">
+                <button class="delete-btn" onclick="futaPichaZilizochaguliwa()">Futa Zilizochaguliwa</button>
+                <button class="cancel-select-btn" onclick="cancelSelectMode()">Ghairi</button>
+            </div>
+        </div>
+        
+        <h2>Mafanikio ya Familia</h2>
+        <div class="timeline">
+            <div class="timeline-event">
+                <span class="event-year">2021</span>
+                <strong>Hussein - Mzumbe University</strong>
+                <p>Kuanza safari ya Software Engineering.</p>
+            </div>
+            <div class="timeline-event">
+                <span class="event-year">2022</span>
+                <strong>Habiba - Biashara ya Nguo</strong>
+                <p>Kuanzisha biashara yake mwenyewe.</p>
+            </div>
+            <div class="timeline-event">
+                <span class="event-year">2024</span>
+                <strong>Ally - Mjasiriamali</strong>
+                <p>Kufungua kampuni ya vifaa vya ujenzi.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== GUESTBOOK PAGE ==================== -->
+    <div id="guestbook-page" class="page-content" style="display: none;">
+        <h1>Kitabu cha Wageni</h1>
+        <p class="subtitle">Acha ujumbe wako kwa familia yetu</p>
+        
+        <div class="family-section">
+            <div class="guestbook-container">
+                <div class="guestbook-form">
+                    <input type="text" id="guestName" placeholder="Jina lako kamili" />
+                    <textarea id="guestText" placeholder="Ujumbe wako..."></textarea>
+                    <button class="member-btn" onclick="ongezaUjumbe()">Tuma Ujumbe</button>
+                </div>
+                <div class="messages-list" id="messagesList">
+                    <p>Loading messages...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== CONTACT PAGE ==================== -->
+    <div id="contact-page" class="page-content" style="display: none;">
+        <h1>Mawasiliano ya Familia</h1>
+        <p class="subtitle">Wasiliana na wanafamilia wetu</p>
+        
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>Mzee Idd Samihu</h3>
+                <p><strong>Simu:</strong> <a href="tel:+255617945051">+255 617 945 051</a></p>
+                <p><strong>Email:</strong> <a href="mailto:hiddy085@gmail.com">hiddy085@gmail.com</a></p>
+                <p><strong>Makazi:</strong> Lindi, Tanzania</p>
+            </div>
+            <div class="contact-card">
+                <h3>Mama Rukia Hussein</h3>
+                <p><strong>Simu:</strong> <a href="tel:+255654676700">+255654676700</a></p>
+                <p><strong>Email:</strong> <a href="mailto:mamarukia@gmail.com">mamarukia@gmail.com</a></p>
+                <p><strong>Makazi:</strong> Lindi, Tanzania</p>
+            </div>
+            <div class="contact-card">
+                <h3>Hussein Idd</h3>
+                <p><strong>Simu:</strong> <a href="tel:+255755970289">+255755970289</a></p>
+                <p><strong>Email:</strong> <a href="mailto:husseinsamihu@gmail.com">husseinsamihu@gmail.com</a></p>
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/255755970289">Click to Chat</a></p>
+                <p><strong>Makazi:</strong> Dar es Salaam / Morogoro</p>
+            </div>
+            <div class="contact-card">
+                <h3>Ally Idd</h3>
+                <p><strong>Simu:</strong> <a href="tel:+255759485051">+255759485051</a></p>
+                <p><strong>Email:</strong> <a href="mailto:allyidd@gmail.com">allyidd@gmail.com</a></p>
+                <p><strong>Makazi:</strong> Dar es Salaam</p>
+            </div>
+            <div class="contact-card">
+                <h3>Habiba Idd</h3>
+                <p><strong>Simu:</strong> <a href="tel:+255617945051">+255 617 945 051</a></p>
+                <p><strong>Email:</strong> <a href="mailto:habibaidd@gmail.com">habibaidd@gmail.com</a></p>
+                <p><strong>Makazi:</strong> Dar es Salaam</p>
+            </div>
+            <div class="contact-card">
+                <h3>Salma Idd</h3>
+                <p><strong>Simu:</strong> <a href="tel:+255317945051">+255 317 945 051</a></p>
+                <p><strong>Email:</strong> <a href="mailto:salmaidd@gmail.com">salmaidd@gmail.com</a></p>
+                <p><strong>Makazi:</strong> Dar es Salaam</p>
+            </div>
+            <div class="contact-card">
+                <h3>Zakawi Idd</h3>
+                <p><strong>Simu:</strong> <a href="tel:+25517945051">+255 179 450 51</a></p>
+                <p><strong>Email:</strong> <a href="mailto:zakawiidd@gmail.com">zakawiidd@gmail.com</a></p>
+                <p><strong>Makazi:</strong> Dar es Salaam</p>
+            </div>
+            <div class="contact-card">
+                <h3>Muler Idd</h3>
+                <p><strong>Simu:</strong> <a href="tel:+255617945051">+255 617 945 051</a></p>
+                <p><strong>Email:</strong> <a href="mailto:muleridd@gmail.com">muleridd@gmail.com</a></p>
+                <p><strong>Makazi:</strong> Dar es Salaam</p>
+            </div>
+            <div class="contact-card">
+                <h3>Naima Fabiani Miyeye</h3>
+                <p><strong>Simu:</strong> <a href="tel:+25517945051">+255 179 450 51</a></p>
+                <p><strong>Email:</strong> <a href="mailto:naimamiiyeye@gmail.com">naimamiiyeye@gmail.com</a></p>
+                <p><strong>Makazi:</strong> Dar es Salaam</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== CALENDAR PAGE ==================== -->
+    <div id="calendar-page" class="page-content" style="display: none;">
+        <h1>Kalenda ya Matukio</h1>
+        <p class="subtitle">Matukio muhimu na siku za kuzaliwa za familia</p>
+        
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button onclick="badilishaMwezi(-1)">Previous</button>
+                <h2 id="mweziMwaka"></h2>
+                <button onclick="badilishaMwezi(1)">Next</button>
+            </div>
+            <div class="calendar-weekdays">
+                <div>J2</div><div>J3</div><div>J4</div><div>J5</div><div>J6</div><div>J7</div><div>J1</div>
+            </div>
+            <div class="calendar-days" id="calendarDays"></div>
+        </div>
+        
+        <div class="upcoming-events">
+            <h3>Matukio Yajayo</h3>
+            <div id="upcomingEventsList" class="events-list"></div>
+        </div>
+    </div>
+
+    <!-- ==================== ANNOUNCEMENTS PAGE ==================== -->
+    <div id="announcements-page" class="page-content" style="display: none;">
+        <h1>Matangazo ya Familia</h1>
+        <p class="subtitle">Taarifa na mambo muhimu kwa wanafamilia</p>
+        
+        <div class="announcement-form">
+            <h3>Tangaza Habari</h3>
+            <input type="text" id="announceTitle" placeholder="Kichwa cha Tangazo" />
+            <textarea id="announceContent" placeholder="Maelezo ya tangazo..."></textarea>
+            <button class="member-btn" onclick="tangaza()">Tangaza Sasa</button>
+        </div>
+        
+        <div class="announcements-list" id="announcementsList">
+            <div class="announcement-card">
+                <h3>Karibu Tovuti Yetu</h3>
+                <p>Karibu kwenye tovuti rasmi ya Familia ya Mzee Idd Samihu.</p>
+                <small>Imetangazwa: Januari 2026</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== BUDGET PAGE ==================== -->
+    <div id="budget-page" class="page-content" style="display: none;">
+        <h1>Fedha na Matumizi ya Familia</h1>
+        <p class="subtitle">Kufuatilia michango na matumizi ya familia</p>
+        
+        <div class="budget-container">
+            <div class="budget-form">
+                <h3>Ongeza Mchango / Matumizi</h3>
+                <input type="text" id="budgetName" placeholder="Jina la Mchangiaji" />
+                <input type="number" id="budgetAmount" placeholder="Kiasi (TZS)" />
+                <select id="budgetType">
+                    <option value="income">Mchango</option>
+                    <option value="expense">Matumizi</option>
+                </select>
+                <input type="text" id="budgetDesc" placeholder="Maelezo" />
+                <button onclick="ongezaBudget()">Ongeza</button>
+            </div>
+            
+            <div class="budget-summary">
+                <div class="summary-card">
+                    <h3>Jumla ya Michango</h3>
+                    <p id="totalIncome">0 TZS</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Jumla ya Matumizi</h3>
+                    <p id="totalExpense">0 TZS</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Salio</h3>
+                    <p id="totalBalance">0 TZS</p>
+                </div>
+            </div>
+            
+            <div id="budgetList" class="budget-list"></div>
+        </div>
+    </div>
+
+    <!-- ==================== RECIPES PAGE ==================== -->
+    <div id="recipes-page" class="page-content" style="display: none;">
+        <h1>Mapishi Asili ya Familia</h1>
+        <p class="subtitle">Vitoweo na vyakula vya kienyeji</p>
+        
+        <div class="recipes-grid" id="recipesGrid">
+            <div class="recipe-card">
+                <h3>Pilau ya Kuku</h3>
+                <h4>Viungo:</h4>
+                <p>Mchele, kuku, vitunguu, nyanya, pilau masala, mdalasini, karafuu.</p>
+                <h4>Utayarishaji:</h4>
+                <p>Kaanga vitunguu, ongeza nyanya, kuku na viungo. Ongeza maji na mchele. Pika mpakaiva.</p>
+                <small>Imetumwa na: Mama Rukia</small>
+            </div>
+        </div>
+        
+        <div class="add-recipe-form">
+            <h3>Shiriki Kichocheo Chako</h3>
+            <input type="text" id="recipeName" placeholder="Jina la Mlo" />
+            <textarea id="recipeIngredients" placeholder="Viungo..."></textarea>
+            <textarea id="recipeMethod" placeholder="Utayarishaji..."></textarea>
+            <button onclick="ongezaKichocheo()">Shiriki</button>
+        </div>
+    </div>
+
+    <!-- ==================== POLLS PAGE ==================== -->
+    <div id="polls-page" class="page-content" style="display: none;">
+        <h1>Maamuzi kwa Kura</h1>
+        <p class="subtitle">Piga kura kwenye masuala ya familia</p>
+        
+        <div id="activePolls" class="polls-container"></div>
+        
+        <div class="create-poll">
+            <h3>Unda Kura Mpya (Admin tu)</h3>
+            <input type="text" id="pollQuestion" placeholder="Swali la kura" />
+            <input type="text" id="pollOption1" placeholder="Chaguo 1" />
+            <input type="text" id="pollOption2" placeholder="Chaguo 2" />
+            <input type="text" id="pollOption3" placeholder="Chaguo 3 (si lazima)" />
+            <button onclick="undaKura()">Unda Kura</button>
+        </div>
+    </div>
+
+    <!-- ==================== MEMORIES PAGE ==================== -->
+    <div id="memories-page" class="page-content" style="display: none;">
+        <h1>Kumbukumbu Maalum</h1>
+        <p class="subtitle">Sherehe, safari na matukio ya kukumbukwa</p>
+        
+        <div class="timeline-memories" id="memoriesTimeline">
+            <div class="memory-card">
+                <div class="memory-year">2023</div>
+                <div class="memory-content">
+                    <h3>Safari ya Zanzibar</h3>
+                    <p>Familia nzima ilifurahia safari ya Zanzibar.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="add-memory">
+            <h3>Ongeza Kumbukumbu</h3>
+            <input type="text" id="memoryTitle" placeholder="Kichwa" />
+            <input type="date" id="memoryDate" />
+            <textarea id="memoryDesc" placeholder="Maelezo..."></textarea>
+            <button onclick="ongezaKumbukumbu()">Ongeza</button>
+        </div>
+    </div>
+
+    <!-- ==================== VIPENGELE VIPYA 5 ==================== -->
+
+    <!-- 1. MICHANGO YA MATUKIO (CONTRIBUTIONS) -->
+    <div id="contributions-page" class="page-content" style="display: none;">
+        <h1>Michango ya Matukio</h1>
+        <p class="subtitle">Changia kwa ajili ya harusi, mazishi, matibabu na elimu</p>
+        
+        <div class="contribution-form">
+            <h3>Changia Sasa</h3>
+            <select id="eventType">
+                <option value="wedding">Harusi</option>
+                <option value="funeral">Mazishi</option>
+                <option value="medical">Matibabu</option>
+                <option value="education">Elimu</option>
+                <option value="other">Nyingine</option>
+            </select>
+            <input type="text" id="contributorName" placeholder="Jina lako" />
+            <input type="number" id="contributionAmount" placeholder="Kiasi cha kuchangia (TZS)" />
+            <input type="text" id="contributionDesc" placeholder="Maelezo (si lazima)" />
+            <button onclick="ongezaMchango()">Changia</button>
+        </div>
+        
+        <div class="contributions-summary">
+            <div class="summary-card">
+                <h3>Jumla ya Michango Yote</h3>
+                <p id="totalContributions">0 TZS</p>
+            </div>
+        </div>
+        
+        <h3>Historia ya Michango</h3>
+        <div id="contributionsList" class="contributions-list"></div>
+    </div>
+
+    <!-- 2. CHAT ROOM (MAZUNGUMZO) -->
+    <div id="chat-page" class="page-content" style="display: none;">
+        <h1>Mazungumzo ya Familia</h1>
+        <p class="subtitle">Zungumza na wanafamilia kwa wakati halisi</p>
+        
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-message system">
+                    <div class="sender">Mfumo</div>
+                    <div class="message">Karibu kwenye mazungumzo ya familia!</div>
+                    <div class="time">Sasa hivi</div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatMessageInput" placeholder="Andika ujumbe wako..." />
+                <button onclick="tumaUjumbeChat()">Tuma</button>
+                <div class="chat-username">
+                    <label>Jina lako:</label>
+                    <input type="text" id="chatUsername" placeholder="Jina lako" value="Mtumiaji" />
+                </div>
+            </div>
+            <div class="chat-users">
+                <h4>Wanafamilia Walio Online</h4>
+                <div id="onlineUsers">
+                    <div class="online-user">Mzee Idd</div>
+                    <div class="online-user">Mama Rukia</div>
+                    <div class="online-user">Hussein</div>
+                    <div class="online-user">Ally</div>
+                    <div class="online-user">Habiba</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. MALENGO YA FAMILIA (GOALS) -->
+    <div id="goals-page" class="page-content" style="display: none;">
+        <h1>Malengo ya Familia</h1>
+        <p class="subtitle">Weka na kufuatilia malengo yetu kwa pamoja</p>
+        
+        <div class="goals-form">
+            <h3>Ongeza Lengo Jipya</h3>
+            <input type="text" id="goalTitle" placeholder="Lengo (mfano: Kununua Gari)" />
+            <input type="number" id="goalTarget" placeholder="Target ya kiasi (TZS)" />
+            <input type="date" id="goalDeadline" />
+            <button onclick="ongezaLengo()">Ongeza Lengo</button>
+        </div>
+        
+        <div class="goals-stats">
+            <div class="stat-box">
+                <div class="stat-number" id="totalGoals">0</div>
+                <div class="stat-label">Jumla ya Malengo</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="completedGoals">0</div>
+                <div class="stat-label">Yaliyokamilika</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="pendingGoals">0</div>
+                <div class="stat-label">Yanayoendelea</div>
+            </div>
+        </div>
+        
+        <div id="goalsList" class="goals-list"></div>
+    </div>
+
+    <!-- 4. KUMBUKUMBU ZA AFYA (HEALTH RECORDS) -->
+    <div id="health-page" class="page-content" style="display: none;">
+        <h1>Kumbukumbu za Afya za Familia</h1>
+        <p class="subtitle">Fuatilia taarifa za afya za wanafamilia</p>
+        
+        <div class="health-form">
+            <h3>Ongeza Kumbukumbu ya Afya</h3>
+            <select id="healthMember">
+                <option value="Mzee Idd">Mzee Idd</option>
+                <option value="Mama Rukia">Mama Rukia</option>
+                <option value="Hussein">Hussein</option>
+                <option value="Ally">Ally</option>
+                <option value="Habiba">Habiba</option>
+                <option value="Salma">Salma</option>
+                <option value="Zakawi">Zakawi</option>
+                <option value="Muler">Muler</option>
+                <option value="Naima">Naima</option>
+            </select>
+            <input type="text" id="healthType" placeholder="Aina (Shinikizo la Damu, Uzito, N.k)" />
+            <input type="text" id="healthValue" placeholder="Thamani" />
+            <input type="date" id="healthDate" />
+            <textarea id="healthNotes" placeholder="Maelezo ya ziada..."></textarea>
+            <button onclick="ongezaKumbukumbuAfya()">Ongeza</button>
+        </div>
+        
+        <div id="healthRecords" class="health-records"></div>
+    </div>
+
+    <!-- 5. TAARIFA ZA SIKU MUHIMU (IMPORTANT DATES) -->
+    <div id="importantdates-page" class="page-content" style="display: none;">
+        <h1>Siku Muhimu za Familia</h1>
+        <p class="subtitle">Kumbukumbu za sherehe, harusi, na matukio maalum</p>
+        
+        <div class="importantdates-form">
+            <h3>Ongeza Siku Muhimu</h3>
+            <input type="text" id="eventTitle" placeholder="Jina la tukio (mfano: Harusi ya Salma)" />
+            <input type="date" id="eventDate" />
+            <select id="eventCategory">
+                <option value="anniversary">Kumbukumbu</option>
+                <option value="wedding">Harusi</option>
+                <option value="graduation">Kuhitimu</option>
+                <option value="other">Nyingine</option>
+            </select>
+            <textarea id="eventDesc" placeholder="Maelezo..."></textarea>
+            <button onclick="ongezaSikuMuhimu()">Ongeza</button>
+        </div>
+        
+        <div id="importantDatesList" class="important-dates-list"></div>
+        
+        <div class="reminder-section">
+            <h3>Kumbusho la Matukio Karibu</h3>
+            <div id="upcomingReminders" class="reminders-list"></div>
+        </div>
+    </div>
+
+    <!-- Share Button -->
+    <div class="share-section">
+        <button class="share-btn" onclick="shirikiWebsite()">Shiriki kwa Familia (WhatsApp)</button>
+    </div>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div id="lightboxModal" class="lightbox" onclick="fungaLightbox()">
+    <span class="close-lightbox" onclick="fungaLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightboxImg" alt="Picha" />
+    <div id="lightboxCaption"></div>
+</div>
+
+<!-- MUSIC CONTROL -->
+<div id="music-control">
+    <button onclick="chezaMuziki()" id="btnMuziki">Play</button>
+    <span>Nyimbo ya familia</span>
+    <audio id="familyAudio" loop="loop">
+        <source src="music/family_song.mp3" type="audio/mpeg" />
+    </audio>
+</div>
+
+<!-- ADMIN PANEL BUTTON -->
+<div class="admin-panel-btn">
+    <button class="member-btn" onclick="funguaAdmin()">Admin Panel</button>
+</div>
+
+<!-- ADMIN PANEL MODAL -->
+<div id="adminBox" class="admin-modal">
+    <div class="admin-modal-content">
+        <span class="close-admin" onclick="funguaAdmin()">&times;</span>
+        <h2>Jopo la Utawala</h2>
+        <div class="admin-form">
+            <div class="admin-field">
+                <label>Badilisha Kichwa (Title)</label>
+                <input type="text" id="mpyaTitle" placeholder="Title Mpya" />
+            </div>
+            <div class="admin-field">
+                <label>Ongeza Picha ya Background</label>
+                <input type="text" id="mpyaBg" placeholder="URL ya Picha Mpya" />
+            </div>
+            <div class="admin-actions">
+                <button class="admin-save" onclick="hifadhiMabadilikoAdmin()">Hifadhi Mabadiliko</button>
+                <button class="admin-backup" onclick="downloadData()">Paku Data Backup</button>
+                <button class="admin-restore" onclick="restoreData()">Rejesha Backup</button>
+                <button class="admin-export" onclick="exportFamilyData()">Export Data</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <div class="footer-content">
+        <div class="footer-info">
+            <p>&copy; 2026 Imeandaliwa na Hussein Idd Samihu</p>
+            <p>Familia ya Mzee Idd Samihu - Lindi, Tanzania</p>
+        </div>
+        <div class="footer-links">
+            <a href="#" onclick="onyeshaPage('home'); return false;">Nyumbani</a> |
+            <a href="#" onclick="onyeshaPage('profiles'); return false;">Wasifu</a> |
+            <a href="#" onclick="onyeshaPage('contact'); return false;">Mawasiliano</a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
